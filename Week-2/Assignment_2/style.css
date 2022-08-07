@@ -1,0 +1,32 @@
+.noMargin {
+    margin: 0px;
+  }
+  
+  .one {
+    background-color: red;
+  }
+  
+  .two {
+    background-color: yellow;
+  }
+  
+  .three {
+    background-color: green;
+  }
+  
+  .four {
+    background-color: blue;
+  }
+  .col{
+    width: 250px;
+    height: 250px;
+  }
+  .row{
+    display: flex;
+  }
+  .rotate{
+    transition: transform .7s ease-out;
+  }
+  .container:hover .rotate{
+    transform: rotate(90deg);
+  }
