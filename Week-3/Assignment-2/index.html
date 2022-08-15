@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+
+</body>
+<script>
+    function cars(list){
+        return console.log(list)     
+    }
+
+    cars.call(0); // We can call the function using 'call'. // We cant pass params
+    const carslist = cars.bind(null, 'audi') // To bind the values to the function we use 'bind', 
+    carslist() // For binding we need to create a function and call it.
+    cars.apply(null, ['skoda', 'audi']) // we can pass a array to the argument. 
+    // For apply we dont need to call a create and call a function seperatly
+</script>
