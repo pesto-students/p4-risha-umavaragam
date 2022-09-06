@@ -20,25 +20,23 @@
 // 0 <= prices[i] <= 104
 
 let stockPrice = function(prices) {
-    if(prices===[]){
-        return 0;
+    let left = 0; // Buy
+  let right = 1; // sell
+  let max_profit = 0;
+  while (right < prices.length) {
+    if (prices[left] < prices[right]) {
+      let profit = prices[right] - prices[left]; // our current profit
+
+      max_profit = Math.max(max_profit, profit);
+    } else {
+      left = right;
     }
-    let profit=0;
-    let i=0;
-    while(i<prices.length-1){
-        let cp=prices[i];
-        let j=i+1;
-        while(j<prices.length){
-            let sp=prices[j]
-            profit=Math.max(profit,sp-cp);
-            j++;
-        }
-        i++;
-    }
-    return profit;
+    right++;
+  }
+  return max_profit;
 };
 
-let profitPrint = stockPrice([7,6,4,3,1])
+let profitPrint = stockPrice([7,6,4,1,3])
 console.log(profitPrint)
 
 // TimeComplexity-O(n^2)
