@@ -39,5 +39,5 @@ let stockPrice = function(prices) {
 let profitPrint = stockPrice([7,6,4,1,3])
 console.log(profitPrint)
 
-// TimeComplexity-O(n^2)
+// TimeComplexity-O(n)
 // SpaceComplexity-O(1)
