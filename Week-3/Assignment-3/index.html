@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+
+</body>
+<script>
+    function createIncrement() {
+        let count = 0;
+        function increment() {
+            count++;
+        }
+
+        let message = `Count is ${count}`;
+
+
+
+        function log() {
+            console.log(message);
+        };
+        return [increment, log];
+    }
+    const [increment, log] = createIncrement();
+    increment();
+    increment();
+    increment();
+    log();
+        // What is logged? '0'
+        //Value count is assigned message at the initalization. So the value '0' is only assigned to it.
+        // In the loop count value is getting updated but not the message value.
+        // to get the message value updated we need to update in the increment function.
+        //The console log of count gives the incremented value but not the message.
+
+</script>
+
+</html>
